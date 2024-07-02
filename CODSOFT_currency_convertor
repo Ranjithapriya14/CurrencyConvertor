@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+public class CurrencyConvertor{
+   public static double yen,inr,euro,Y,D,E;
+   CurrencyConvertor(){
+      Y=0.57;
+      D=83;
+      E=91;
+   }
+public static void toINR(double yen,double dollar,double euro){
+   double rs_y,rs_d,rs_e;
+   rs_y=yen * Y;
+   rs_d=dollar * D;
+   rs_e=euro * E;
+   System.out.println();
+   System.out.println("Equivalent Rupees of "+yen+" Yen is \t:₹."+rs_y);
+   System.out.println("Equivalent Rupees of "+dollar+" Dollar is \t:₹."+rs_d);
+   System.out.println("Equivalent Rupees of "+euro+" Euro is \t:₹."+rs_e);
+}
+public static void inrTo(double inr){
+   double y,d,e;
+   y=inr/Y;
+   d=inr/D;
+   e=inr/E;
+   System.out.println();
+   System.out.println("Equivalent yen of "+inr+" rupees is \t:¥."+String.format("%.2f",y));
+   System.out.println("Equivalent dollar of "+inr+" rupees is \t:$."+String.format("%.2f",d));
+   System.out.println("Equivalent euro of "+inr+" rupees is \t:€."+String.format(".%2f",e));
+}
+public static void main(String[]args){
+   CurrencyConvertor Cv=new CurrencyConvertor();
+   Scanner in=new Scanner(System.in);
+   double yen=0;
+   double dollar=0;
+   double euro=0;
+   double i=0;
+   System.out.println("Currency Conversion(Yen,Dollar,Euro to INR)");
+   System.out.print("YEN is ");
+   yen=in.nextInt();
+   System.out.print("DOLLAR is ");
+   dollar=in.nextInt();
+   System.out.print("EURO is ");
+   euro=in.nextInt();
+   toINR(yen,dollar,euro);
+   System.out.println("Currency Conversion(INR to Yen,Dollar,Euro)");
+   System.out.print("Indian Rupees INR : ");
+   i=in.nextInt();
+   inrTo(i);
+}
+}
