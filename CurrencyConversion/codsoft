@@ -20,7 +20,7 @@ public static void main(String[]args){
    double yen=0;
    double dollar=0;
    double i=0;
-   System.out.println("Currency Conversion(INR to Yen,Dollar,Euro)");
+   System.out.println("Currency Conversion(INR to Yen,Dollar)");
    System.out.print("Indian Rupees INR : ");
    i=in.nextInt();
    inrTo(i);
