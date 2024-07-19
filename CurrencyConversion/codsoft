@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 public class CurrencyConvertor{
-   public static double yen,inr,euro,Y,D,E;
+   public static double yen,dollar,inr,Y,D;
    CurrencyConvertor(){
       Y=0.57;
       D=83;
